@@ -68,6 +68,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
 MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
+//MAKE_HRM(hmr_minus, &kp, &kp MINUS, KEYS_L THUMBS)
 
 /* Nav cluster */
 
@@ -226,13 +227,13 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    &kp ESC  &kp Q         &kp W         &kp E         &kp R         &kp T            &kp Y         &kp U         &kp I         &kp O         &kp P          &kp BSPC
+   &kp ESC   &kp Q         &kp W         &kp E         &kp R         &kp T            &kp Y         &kp U         &kp I         &kp O         &kp P          &kp BSPC
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &kp TAB  &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G            &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI SEMI &kp SQT
+   &kp TAB   &hml LCTRL A  &hml LGUI S   &hml LALT D   &hml LSHFT F  &kp G            &kp H         &hmr RSHFT J  &hmr LALT K   &hmr LGUI L   &hmr LCTRL SEMI &kp SQT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &comma_morph  &dot_morph    &qexcl         &kp RET
+   &kp LGUI  &kp Z         &kp X         &kp C         &kp V         &kp B            &kp N         &kp M         &comma_morph  &dot_morph    &qexcl         &kp RET
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    &lt NAV SPACE                                     &lt FN RET    &lt SYM SPACE     SMART_NUM     &smart_shft                                              &smart_mouse
+   &lt_spc NAV 0                                     &lt FN RET    &lt SYM SPACE     SMART_NUM     &smart_shft                                              &smart_mouse
 //╰──────╯                                           ╰─────────────┴─────────────╯  ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
@@ -262,11 +263,11 @@ ZMK_LAYER(fn,
 
 ZMK_LAYER(num,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    ___     ___           ___           ___           ___           ___              ___           &kp N7        &kp N8        &kp N9           ___             ___
+    ___     ___           ___           ___           ___           ___              ___           &kp N7        &kp N8        &kp N9        ___             ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___     &hml LGUI N4    &hml LALT N5    &hml LSHFT N6   &hml LCTRL N7    ___              ___           &kp N4        &kp N5        &kp N6           ___             ___
+    ___     ___           ___           ___           ___           ___              &kp N0        &hmr RSHFT N4 &hmr LALT N5  &hmr LGUI N6  &hmr LCTRL N0    ___        
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___     ___           ___           ___           ___           ___              ___           &kp N1        &kp N2        &kp N3          ___             ___
+    ___     ___           ___           ___           ___           ___              ___           &kp N1        &kp N2        &kp N3        ___             ___
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     ___                                               ___           ___              ___           ___                                                       ___
 //╰──────╯                                           ╰─────────────┴─────────────╯  ╰─────────────┴─────────────╯                                           ╰──────╯
